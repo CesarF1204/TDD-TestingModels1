@@ -1,0 +1,39 @@
+<%- include ('../templates/header.ejs') %>
+<div class='container profile'>
+    
+    <h2>Edit Profile</h2>
+    <form class='edit-information' action="/users/update" method='POST'>
+        <h5>Edit Information:</h5>
+        <label for="email">Email Address: </label>
+        <input type="email" id='email' name='email' value="<%= getUser[0].email %>">
+    
+        <label for="first_name">First Name: </label>
+        <input type="text" id='first_name' name='first_name' value="<%= getUser[0].first_name %>">
+    
+        <label for="last_name">Last Name: </label>
+        <input type="text" id='last_name' name='last_name' value="<%= getUser[0].last_name %>">
+        
+        <input type="submit" value="Update">
+    </form>
+    
+    <form class='change-password' action="/users/update_password" method='POST'>
+        <h5>Change Password:</h5>
+        <label for="password">Password: </label>
+        <input type="password" id='password' name='password'>
+    
+        <label for="confirm_password">Confirm Password: </label>
+        <input type="password" id='confirm_password' name='confirm_password'>
+    
+        <input type="submit" value="Update Password">
+    </form>
+    
+    <form class='edit-description' action="/users/update_description" method='POST'>
+        <h5>Edit Description:</h5>
+        <textarea name="description" id="description" cols="70" rows="10" placeholder="Type your description here..."></textarea>
+        <input type="submit" value="Save">
+    </form>
+    
+</div>
+<br>
+<a class='return-dashboard' href="/dashboard">Return to Dashboard</a>
+<%- include ('../templates/footer.ejs') %> 

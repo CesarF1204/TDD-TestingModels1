@@ -1,0 +1,39 @@
+<%- include ('../templates/header.ejs') %>
+<div class='container edit-form'>
+    <h2>Edit user#<%= getUser[0].id %></h2>
+    <form class='edit-information' action="/admins/user_update/<%= getUser[0].id %>" method='POST'>
+
+        <h5>Edit Information:</h5>
+        <label for="email">Email Address: </label>
+        <input type="email" id='email' name='email' value="<%= getUser[0].email %>">
+
+        <label for="first_name">First Name: </label>
+        <input type="first_name" id='first_name' name='first_name' value="<%= getUser[0].first_name %>">
+
+        <label for="last_name">Last Name: </label>
+        <input type="last_name" id='last_name' name='last_name' value="<%= getUser[0].last_name %>">
+
+        <label for="user_level">User Level:</label>
+        <select name="user_level_id" id="user_level" required>
+            <option>--Select User Level--</option>
+            <option value="9">Admin</option>
+            <option value="0">Normal</option>
+        </select>
+        
+        <input type="submit" value="Update">
+    </form>
+    <form class='change-password' action="/admins/update_password/<%= getUser[0].id %>" method='POST'>
+
+        <h5>Change Password:</h5>
+        <label for="password">Password: </label>
+        <input type="password" id='password' name='password'>
+
+        <label for="confirm_password">Confirm Password: </label>
+        <input type="password" id='confirm_password' name='confirm_password'>
+        
+        <input type="submit" value="Update Password">
+    </form>
+</div>
+<br>
+<a class='return-dashboard' href="/dashboard">Return to Dashboard</a>
+<%- include ('../templates/footer.ejs') %>

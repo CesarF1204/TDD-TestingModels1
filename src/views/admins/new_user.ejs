@@ -1,0 +1,34 @@
+<%- include ('../templates/header.ejs') %>
+<div class='add-new-form'>
+    <div class="col-lg-4 mt-5">
+        <div class="card bg-primary text-center card-form">
+            <div class="card-body">
+                <h3>Add New Account</h3>
+                <p>Please fill out this form to add a new account</p>
+                <form action="/admins/new_user_process" method="post">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control form-control-lg" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="first_name" class="form-control form-control-lg" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="last_name" class="form-control form-control-lg" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control form-control-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="confirm_password" class="form-control form-control-lg" placeholder="Confirm Password">
+                    </div><br>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-outline-light btn-block" value="Create">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <a class='return-dashboard' href="/dashboard">Return to Dashboard</a>
+</div>
+<%- include ('../templates/footer.ejs') %>

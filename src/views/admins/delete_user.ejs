@@ -1,0 +1,12 @@
+<%- include ('../templates/header.ejs') %>
+<div class="container remove-user">
+    <h1>Are you sure you want to delete this user?</h1>
+    <form action="/admins/delete_user/<%= getUser[0].id %>" method="post">
+        <br>
+        <h2>Name: <span><%= getUser[0].first_name +' '+ getUser[0].last_name %></span></h2>
+        <h2>Email: <span><%= getUser[0].email %></span></h2>
+        <button type="submit" class='remove-yes' name="user_id" value="<%= getUser[0].id %>">Yes! I want to delete this.</button> 
+    </form>
+    <a class='remove-no' href='/dashboard'>No!</a>
+</div>
+<%- include ('../templates/footer.ejs') %> 

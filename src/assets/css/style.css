@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth!important;
+}
+html, body {
+    height: 87%;
+    margin: 0;
+    }
+body {
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+/* navigation */
+.navbar {
+    border-bottom: 3px solid #008ed6;
+    opacity: 0.8;
+}
+.navbar ul li{
+    padding: 0 15px;
+}
+/* home */
+#home {
+    background: url("/images/home.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+    color: #fff;
+}
+#home .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+}
+#home .home-inner {
+    padding-top: 150px;
+}
+#home .card-form {
+    opacity: 0.8;
+}
+/* about us */
+#about_us_body img{
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in;
+}
+#about_us_body img:hover {
+    transform: translateY(-1em);
+}
+#about_us_body iframe{
+    border: none;
+}
+.find-out-more {
+    border-bottom: 3px solid #008ed6;
+}
+/* footer */
+#footer {
+    background-color: #303878;
+    margin-top: 20px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+/* signin */
+.sign-in {
+    margin-top: 160px;
+    min-height: 85%;
+}
+.mt-5 {
+    margin: auto;
+}
+.card-body a, .card-body h3, .card-body p{
+    color: white;
+}
+.card-body a:hover {
+    color: black;
+    text-decoration: none;
+}
+/* dashboard */
+.dashboard {
+    margin-top: 70px;
+    min-height: 100%;
+}
+h2 {
+    border-bottom: 3px solid red;
+}
+/* add new button */
+.add-new {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    margin-top: 5px;
+    padding: 8px 20px;
+    box-shadow: 3px 3px #000;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+    width: 130px;
+    text-align: center;
+}
+.add-new:hover {
+    text-decoration: none;
+    color: white;
+    transform: translateY(-0.3em);
+    box-shadow: 4px 4px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+/* add new form */
+.add-new-form, .register {
+    margin-top: 120px;
+    min-height: 95%;
+}
+/* dashboard users table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+tbody tr:hover {
+    background-color: #d8d8d8;
+    transition: 0.3s ease;
+}
+a,th {
+    cursor: pointer;
+}
+/* search bar */
+#myTable_filter input {
+    background: none;
+    color: black;
+    border: 1px solid teal;
+    padding: 5px 6px;
+    width: 200px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+#myTable_filter input:focus {
+    background: none;
+    width: 300px;
+    transition: 0.5s ease;
+    outline: 0;
+}
+/* pagination */
+.dataTables_paginate {
+    margin-top: 20px;
+}
+.dataTables_paginate a {
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    margin: 0 4px 10px 0;
+    text-decoration: none;
+}
+.dataTables_paginate a:hover {
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 0 5px 2px -2px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+/* edit and delete button */
+.edit, .remove, .remove-yes, .remove-no {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    margin-top: 5px;
+    padding: 8px 20px;
+    box-shadow: 3px 3px #000;
+    color: white;
+    cursor: pointer;
+    background-color: #3366ff;
+    width: 100px;
+    text-align: center;
+}
+.edit:hover, .remove:hover, .remove-no:hover {
+    text-decoration: none;
+    color: white;
+}
+/* remove button */
+.remove {
+    background-color: red;
+}
+.remove-yes {
+    width: 250px;
+    background-color: red;
+    margin-top: 60px;
+}
+.remove-user {
+    margin-top: 120px;
+    min-height: 95%;
+}
+/* profile */
+.profile, .edit-form {
+    margin-top: 100px;
+    min-height: 95%;
+    border: 3px solid black;
+    width: 850px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    padding: 40px;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.profile form, .edit-form form{
+    display: inline-block;
+    margin: 10px 0;
+    margin-right: 70px;
+}
+.profile label, .profile input, .edit-form label, .edit-form input {
+    display: block;
+    margin: 10px 0;
+}
+.edit-information, .change-password, .edit-description {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+.edit-description{
+    width: 675px;
+    padding: 10px 30px;
+}
+.profile input, .edit-form input, .edit-form select{
+    background: none;
+    color: black;
+    border: 1px solid teal;
+    padding: 5px 6px;
+    width: 200px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.profile input:focus, .edit-form input:focus {
+    background: none;
+    width: 230px;
+    transition: 0.5s ease;
+}
+.profile input[type='submit'], .edit-form input[type='submit'] {
+    width: 140px;
+}
+.profile input[type='submit']:hover, .edit-form input[type='submit']:hover {
+    background-color: teal;
+    color: white;
+    transition: 0.3s ease;
+}
+.return-dashboard {
+    display:block;
+    text-align: center;
+}
+/* messages and comments */
+.messages-and-comments {
+    margin-top: 100px;
+}
+.user-information {
+    border: 3px solid black;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+/* messages */
+.messages-info {
+    border: 3px solid black;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.messages-info textarea {
+    width: 100%;
+    font-size: 20px;
+}
+.messages-info input {
+    display: block;
+    margin: auto;
+    border: none;
+    margin-top: 10px;
+    padding: 8px 20px;
+    box-shadow: 3px 3px #000;
+    background-color: #2b78e4;
+    color: white;
+    cursor: pointer;
+}
+.messages-info input:hover {
+    transform: translateY(-0.3em);
+    box-shadow: 4px 4px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+.message-content {
+    border: 5px solid #3a3b3c;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+/* comments */
+.comments-info {
+    padding: 30px 80px;
+}
+.comments-info textarea {
+    width: 50%;
+    margin-left: 50px;
+}
+.comments-info ul {
+    margin-left: 50px;
+}
+.comments-info input {
+    border: none;
+    margin-top: 10px;
+    padding: 8px 20px;
+    box-shadow: 3px 3px #000;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+.comments-info input:hover {
+    transform: translateY(-0.3em);
+    box-shadow: 4px 4px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+.post-divider {
+    border-bottom: 5px solid black;
+    margin: 50px 0;
+}
+.errors, .success{
+	color: red;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+}
+.success {
+	color: green;
+}

@@ -1,0 +1,53 @@
+<%- include ('../templates/header.ejs') %>
+<div class='container dashboard'>
+    <% if(typeof errorComment !== 'undefined') { %>
+        <p class='errors'><%= errorComment %></p>
+    <% } else if(typeof successComment !== 'undefined') { %>
+        <p class='success'><%= successComment %></p>
+    <% } else if(typeof deleteUser !== 'undefined') { %>
+        <p class='errors'><%= deleteUser %></p>
+    <% } %>
+
+    <% if(userLevel === 9) { %>
+    <h2>Manage Users</h2>
+    <% } else { %>
+    <h2>All Users</h2>
+    <% } %>
+    
+    <% if(userLevel === 9) { %>
+            <a class='add-new' href="/users/new">Add New</a>
+    <% } %>
+        <table id="myTable" class='display'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Created_at</th>
+                    <th>User_level</th>
+    <%  if(userLevel === 9) { %>
+                    <th>Actions</th>
+    <%  } %>
+                </tr>
+            </thead>
+            <tbody>
+    <%  for(let x in getAllUser) { %>
+                <tr>
+                    <td><%= getAllUser[x].id %></td>
+                    <td><a href="users/show/<%= getAllUser[x].id %>"><%= getAllUser[x].first_name+ ' ' +getAllUser[x].last_name %></a></td>
+                    <td><%= getAllUser[x].email %></td>
+                    <td><%= getAllUser[x].created_at %></td>
+                    <td><%= getAllUser[x].user_level_name %></td>
+    <%  if(userLevel === 9) { %>
+                    <td>
+                        <a class='edit' href="/users/edit/<%= getAllUser[x].id %>">Edit</a>
+                        <a class='remove' href='/admins/delete_confirmation/<%= getAllUser[x].id %>'>Delete</a>
+                    </td>
+    <%  } %>
+                </form>
+                </tr>
+    <%  } %>
+            </tbody>
+        </table>
+</div>
+<%- include ('../templates/footer.ejs') %> 
